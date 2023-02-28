@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const Aboutme =()=>{
+const Footer =()=>{
     return(
        <h1>Tyler Powers</h1>
     )
 }
 
-export default Aboutme
+export default Footer
