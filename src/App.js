@@ -16,7 +16,7 @@ const App = () => {
         return <Aboutme />
       case "Contact":
         return <Contact />
-      case "Porfolio":
+      case "Portfolio":
         return <Portfolio />
       case "Resume":
         return <Resume />
