@@ -7,12 +7,11 @@ import Resume from "./componets/Resume";
 import Header from "./componets/Header";
 import Footer from "./componets/Footer";
 
-const App = () =>{
-  const [currentPage, setCurrentPage]=useState("Aboutme")
+const App = () => {
+  const [currentPage, setCurrentPage] = useState("Aboutme")
 
-  const  handleCurrentPage = (page) => {
-    setCurrentPage(page)
-    switch(page){
+  const handleCurrentPage = () => {
+    switch (currentPage) {
       case "Aboutme":
         return <Aboutme />
       case "Contact":
@@ -23,14 +22,17 @@ const App = () =>{
         return <Resume />
       default:
         return <Aboutme />
-    
+
     }
   }
- 
+  const updatePage = (page) => {
+
+    setCurrentPage(page)
+  }
   return (
     <div className="App">
-      <Header currentPage={currentPage} handleCurrentPage={handleCurrentPage}/>
-      {/* {handleCurrentPage()} */}
+      <Header currentPage={currentPage} handleCurrentPage={updatePage} />
+      {handleCurrentPage()}
       <Footer />
     </div>
   );
